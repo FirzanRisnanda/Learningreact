@@ -12,7 +12,7 @@ const NotificationScreen = () => {
                     source={{ uri: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&w=1000&q=80' }}
                     style={{width: 50, height: 50}}/>
                   <Text style={{paddingStart:15 ,lineHeight:15, textAlign:'left', marginTop:20}}>
-                      Lorem Ipsum is simply dummy text
+                      Lorem Ipsum is simply dummy text. Enjoy Your React Code.
                   </Text>
                 </View>
 
@@ -21,7 +21,7 @@ const NotificationScreen = () => {
                     source={{ uri: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&w=1000&q=80' }}
                     style={{width: 50, height: 50}}/>
                   <Text style={{paddingStart:15 ,lineHeight:15, textAlign:'left', marginTop:20}}>
-                      Lorem Ipsum is simply dummy text
+                      Lorem Ipsum is simply dummy text 
                   </Text>
                 </View>
 
