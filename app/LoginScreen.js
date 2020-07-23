@@ -1,4 +1,4 @@
-  import React, { memo, useState } from 'react';
+import React, { memo, useState } from 'react';
 import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 
 const LoginScreen = ({ navigation }) => {
@@ -15,7 +15,7 @@ const LoginScreen = ({ navigation }) => {
       return;
     }
 
-    navigation.navigate('Dashboard');
+    navigation.navigate('HomeScreen');
   };
 
   return (

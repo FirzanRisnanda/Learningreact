@@ -9,16 +9,18 @@ import { Icon } from 'react-native-elements';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 console.disableYellowBox = true;
-import Login from './app/LoginScreen'
+
+import LoginScreen from './app/LoginScreen'
 import HomeScreen from './app/HomeScreen' 
 import SearchScreen from './app/SearchScreen'
 import AddPostScreen from './app/AddPostScreen'
 import NotificationScreen from './app/NotificationScreen'
-import ProfilScreen from './app/ProfilScreen'
-import LoginScreen from './app/LoginScreen';
+import ProfilScreen from './app/ProfilScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+
+
 
 function LogoTitle() {
   return (
@@ -33,8 +35,8 @@ function LogoTitle() {
 
 function LoginStack(){
   return (
-    <Stack.Navigator initialRouteName={'Login'}>
-      <Stack.Screen name="Login" component={LoginScreen}/>
+    <Stack.Navigator initialRouteName={'LoginScren'}>
+      <Stack.Screen name="LoginScreen" component={LoginScreen}/>
     </Stack.Navigator>
   )
 }
@@ -119,7 +121,11 @@ function ProfilStack(){
 
 function App() {
   return (
+
     <NavigationContainer>
+
+    <Stack.Screen name="Login" component={LoginStack}/>
+
       <Tab.Navigator
         initialRouteName="Feed"
         tabBarOptions={{
@@ -192,9 +198,7 @@ function App() {
               </View>
             ),
           }}/>  
-      
-      </Tab.Navigator>  
-    <Stack.Screen name="LoginStack" component={LoginStack} />
+      </Tab.Navigator> 
     </NavigationContainer>
   );
 }
