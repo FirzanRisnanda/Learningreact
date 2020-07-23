@@ -24,7 +24,7 @@ const LoginScreen = ({ navigation }) => {
 
       <Logo />
 
-      <Header>Welcome back.</Header>
+      <Header>Welcome back</Header>
 
       <TextInput
         label="Email"
