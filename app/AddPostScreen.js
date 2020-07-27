@@ -1,27 +1,53 @@
 import * as React from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import { Button, Image, View, Text,TouchableOpacity } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+import * as Sharing from 'expo-sharing'; 
+import Constants from 'expo-constants';
+import * as Permissions from 'expo-permissions';
 
-const AddPostScreen = () => {
-  return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1, padding: 16 }}>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <Text
-            style={{
-              fontSize: 25,
-              textAlign: 'center',
-              marginBottom: 16
-            }}>
-            View Foto Di Galeri
-          </Text>
-        </View>
+export default class ImagePickerExample extends React.Component {
+  state = {
+    image: null,
+  };
+
+  render() {
+    let { image } = this.state;
+    return (
+      <View style={{ backgroundColor: '#fff', justifyContent: 'center'}}>
+        {image && <Image source={{ uri: image }} 
+        style={{ backgroundColor: '#fff', marginBottom:5,paddingStart: 15, width: 500, height: 250 }} />}
+        <Button title="Pilih Foto" onPress={this._PilihFoto}/>
       </View>
-    </SafeAreaView>
-  );
+    );
+  }
+
+  componentDidMount() {
+    this.getPermissionAsync();
+  }
+
+  getPermissionAsync = async () => {
+    if (Constants.platform.ios) {
+      const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+      if (status !== 'granted') {
+        alert('Sorry');
+      }
+    }
+  };
+
+  _PilihFoto = async () => {
+    try {
+      let result = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: ImagePicker.MediaTypeOptions.All,
+        allowsEditing: false,
+        aspect: [4, 8],
+        quality: 1,
+      });
+      if (!result.cancelled) {
+        this.setState({ image: result.uri });
+      }
+      console.log(result);
+    } catch (E) {
+      console.log(E);
+    }
+  };
 }
-export default AddPostScreen;
