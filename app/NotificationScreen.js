@@ -11,7 +11,7 @@ const NotificationScreen = () => {
                 contentContainerStyle={{backgroundColor:'#fff',paddingStart:5}}>
                 <View style={{ backgroundColor:'#fff', height:60, paddingTop:5, flexDirection:'row'}}>
                   <Image
-                    source={{ uri: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&w=1000&q=80' }}
+                    source={{ uri: 'https://wallpapercave.com/wp/wp3070126.jpg' }}
                     style={{width: 50, height: 50}}/>
                   <Text style={{paddingStart:15, width:250 ,lineHeight:15, textAlign:'left', marginTop:20}}>
                       Lorem Ipsum is simply dummy text
@@ -28,7 +28,7 @@ const NotificationScreen = () => {
 
                 <View style={{ backgroundColor:'#fff', height:60, paddingTop:5, flexDirection:'row'}}>
                   <Image
-                    source={{ uri: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&w=1000&q=80' }}
+                    source={{ uri: 'https://wallpapercave.com/wp/wp3070126.jpg' }}
                     style={{width: 50, height: 50}}/>
                   <Text style={{paddingStart:15,width:250 ,lineHeight:15, textAlign:'left', marginTop:20}}>
                       Lorem Ipsum is simply dummy text 

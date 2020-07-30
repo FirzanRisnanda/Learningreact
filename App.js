@@ -134,7 +134,7 @@ function App() {
             tabBarIcon: () => (
               
                 <MaterialCommunityIcons  
-                name="home" 
+                name="home-outline" 
                 color='#517fa4' 
                 size={35}
                 />
@@ -186,7 +186,7 @@ function App() {
             tabBarLabel:'',
             tabBarIcon: () => (
                 <MaterialCommunityIcons  
-                name="account-circle" 
+                name="account-circle-outline" 
                 color='#517fa4' 
                 size={35}
                 />
