@@ -132,7 +132,6 @@ function App() {
           options={{
             tabBarLabel:'',
             tabBarIcon: () => (
-              
                 <MaterialCommunityIcons  
                 name="home-outline" 
                 color='#517fa4' 
