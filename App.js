@@ -24,12 +24,10 @@ const Tab = createBottomTabNavigator();
 
 function LogoTitle() {
   return (
-    <View style={{width:35, marginStart:40, justifyContent:'center', alignItems:'center'}}>
       <Image
         source={{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTCtXE9_m-XXWJmgdFjowBMrV7wBJlkazWJORTyOUYp1t4sysJy&usqp=CAU'}}
         style={{ width:115, height:32}}
       />
-    </View>
   );
 }
 
@@ -123,11 +121,10 @@ function App() {
   return (
 
     <NavigationContainer>
-
     <Stack.Screen name="Login" component={LoginStack}/>
 
       <Tab.Navigator
-        initialRouteName="Feed"
+        initialRouteName="Home"
         tabBarOptions={{
             activeTintColor: '#517fa4',
         }}>
@@ -135,13 +132,12 @@ function App() {
           options={{
             tabBarLabel:'',
             tabBarIcon: () => (
-              <View style={{ marginTop:15 }}>
+              
                 <MaterialCommunityIcons  
                 name="home" 
                 color='#517fa4' 
-                size={40}
+                size={35}
                 />
-              </View>
             ),
           }}/>
 
@@ -149,13 +145,11 @@ function App() {
           options={{
             tabBarLabel:'',
             tabBarIcon: () => (
-              <View style={{ marginTop:15 }}>
                 <MaterialCommunityIcons  
                 name="magnify" 
                 color='#517fa4' 
-                size={40}
+                size={35}
                 />
-              </View>
             ),
           }}/>
 
@@ -163,11 +157,15 @@ function App() {
           options={{
             tabBarLabel:'',
             tabBarIcon: () => (
+              <View style={{alignItems: 'center', borderRadius:35, height:63, width:63,
+              justifyContent:'center', alignItems:'center',
+              bottom:5}}>
               <MaterialCommunityIcons  
               name="plus-circle" 
               color='#517fa4' 
               size={60}
               />
+              </View>
             ),
           }}/>
 
@@ -175,13 +173,11 @@ function App() {
           options={{
             tabBarLabel: '',
             tabBarIcon: () => (
-                <View style={{ marginTop:15 }}>
                 <MaterialCommunityIcons
                 name="bell-outline" 
                 color='#517fa4'  
-                size={40} 
+                size={35} 
                 />
-              </View>
             ),
           }} />
 
@@ -189,13 +185,11 @@ function App() {
           options={{
             tabBarLabel:'',
             tabBarIcon: () => (
-              <View style={{ marginTop:15 }}>
                 <MaterialCommunityIcons  
                 name="account-circle" 
                 color='#517fa4' 
-                size={40}
+                size={35}
                 />
-              </View>
             ),
           }}/>  
       </Tab.Navigator> 

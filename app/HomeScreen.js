@@ -123,7 +123,7 @@ export default class Home extends React.Component {
                     style={{ width: 500, height: 250}}
                     />
     
-                    <View style={{width:70, marginRight:290, justifyContent:'center', alignItems:'center', flexDirection:'row'}}>
+                    <View style={{width:70, marginRight:300, justifyContent:'center', alignItems:'center', flexDirection:'row'}}>
                         <Icon
                         name='heart'
                         type='evilicon'
@@ -143,7 +143,7 @@ export default class Home extends React.Component {
                         size={35}
                         />
                     </View>
-                    <Text style={{ lineHeight:20, textAlign:'left', marginTop:5}}>
+                    <Text style={{ lineHeight:20, textAlign:'auto', marginTop:5, marginRight:40}}>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
                 </View>
 
@@ -153,7 +153,7 @@ export default class Home extends React.Component {
                     style={{ width: 500, height: 250}}
                     />
                     
-                    <View style={{width:70, marginRight:290, justifyContent:'center', alignItems:'center', flexDirection:'row'}}>
+                    <View style={{width:70, marginRight:300, justifyContent:'center', alignItems:'center', flexDirection:'row'}}>
                         <Icon
                         name='heart'
                         type='evilicon'
@@ -174,7 +174,7 @@ export default class Home extends React.Component {
                         />
                     </View>
 
-                    <Text style={{ lineHeight:21, textAlign:'left', marginTop:5
+                    <Text style={{ lineHeight:21, textAlign:'left', marginTop:5, marginRight:40
                     }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
                 </View>
 
@@ -184,7 +184,7 @@ export default class Home extends React.Component {
                     style={{ width: 500, height: 250}}
                     />
 
-                    <View style={{width:70, marginRight:290, justifyContent:'center', alignItems:'center', flexDirection:'row'}}>
+                    <View style={{width:70, marginRight:300, justifyContent:'center', alignItems:'center', flexDirection:'row'}}>
                         <Icon
                         name='heart'
                         type='evilicon'
@@ -205,7 +205,7 @@ export default class Home extends React.Component {
                         />
                     </View>
 
-                    <Text style={{ lineHeight:21, textAlign:'left', marginTop:5
+                    <Text style={{ lineHeight:21, textAlign:'left', marginTop:5, marginRight:40
                     }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
                 </View>
                 </Animated.ScrollView>
