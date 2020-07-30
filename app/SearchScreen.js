@@ -25,7 +25,7 @@ export default class App extends React.Component {
     const { search } = this.state;
     return (
         <>
-            <View style={{backgroundColor:'#fff', width: 500, height: 80, justifyContent:'center', paddingTop:25}}>
+            <View style={{backgroundColor:'#fff',justifyContent:'center', marginTop:30}}>
                 <SearchBar
                     platform={Platform.OS}
                     onChangeText={this._onChangeSearch}
@@ -37,7 +37,7 @@ export default class App extends React.Component {
 
             <Animated.ScrollView
                 Vertical={true} showsVerticalScrollIndicator={true}
-                contentContainerStyle={{paddingStart:15}}>
+                contentContainerStyle={{justifyContent:'center'}}>
 
                 <View style={{justifyContent:'center', alignItems:'center', flexDirection:'row'}}>
                     <Image
