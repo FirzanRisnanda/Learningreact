@@ -1,17 +1,6 @@
 import React from 'react';
-import {
-    Dimensions,
-    AppRegistry,
-    StyleSheet,
-    View,
-    TextInput,
-    Text,
-    Animated, Image
-
-} from 'react-native';
-
+import { View, Animated, Image} from 'react-native';
 import { SearchBar } from 'react-native-elements';
-
 
 export default class App extends React.Component {
   state = {
@@ -20,7 +9,6 @@ export default class App extends React.Component {
   
   _onChangeSearch = query => this.setState({ search: query });
   
-
   render() {
     const { search } = this.state;
     return (
@@ -31,8 +19,7 @@ export default class App extends React.Component {
                     onChangeText={this._onChangeSearch}
                     icon={{ type: 'font-awesome', name: 'search' }}
                     placeholder='Type Here...' 
-                    value={search}
-                />
+                    value={search}/>
             </View>
 
             <Animated.ScrollView

@@ -20,8 +20,6 @@ import ProfilScreen from './app/ProfilScreen';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-
-
 function LogoTitle() {
   return (
       <Image

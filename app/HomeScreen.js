@@ -180,7 +180,7 @@ export default class Home extends React.Component {
 
                 <View style={{justifyContent:'center', alignItems:'center', marginTop:15}}>
                     <Image
-                    source={{ uri: 'https://wallpapercave.com/wp/wp3070126.jpg' }}
+                    source={{ uri: 'https://wallpapercave.com/wp/wp3070126.jpg'}}
                     style={{ width: 500, height: 250}}
                     />
 

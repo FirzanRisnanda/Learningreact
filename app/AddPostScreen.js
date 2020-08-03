@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Button, Image, View, Text,TouchableOpacity } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-import * as Sharing from 'expo-sharing'; 
 import Constants from 'expo-constants';
 import * as Permissions from 'expo-permissions';
+//import * as Sharing from 'expo-sharing'; 
 
 export default class ImagePickerExample extends React.Component {
   state = {
@@ -14,8 +14,10 @@ export default class ImagePickerExample extends React.Component {
     let { image } = this.state;
     return (
       <View style={{ backgroundColor: '#fff', justifyContent: 'center'}}>
+        
         {image && <Image source={{ uri: image }} 
         style={{ backgroundColor: '#fff', marginBottom:5,paddingStart: 15, width: 500, height: 250 }} />}
+        
         <Button title="Pilih Foto" onPress={this._PilihFoto}/>
       </View>
     );
