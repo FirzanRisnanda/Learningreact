@@ -69,7 +69,7 @@ export default class Home extends React.Component {
                                 style={{width:50, height:50, borderRadius:50}}
                             />
                             {
-                                item.story_is_online ? 
+                                item.story_is_online? 
                                 <View style={{width:15, height:15, borderRadius:15, backgroundColor:'green',
                                         position:'absolute', bottom:0, right:0
                                     }}

@@ -10,7 +10,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 console.disableYellowBox = true;
 
-import LoginScreen from './app/LoginScreen'
+//import LoginScreen from './app/LoginScreen'
 import HomeScreen from './app/HomeScreen' 
 import SearchScreen from './app/SearchScreen'
 import AddPostScreen from './app/AddPostScreen'
