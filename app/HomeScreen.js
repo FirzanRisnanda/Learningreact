@@ -115,13 +115,13 @@ export default class Home extends React.Component {
 
                 <Animated.ScrollView
                             Vertical={true} showsVerticalScrollIndicator={true}
-                            contentContainerStyle={{paddingStart:15}}
-                        >
+                            contentContainerStyle={{paddingStart:15}}>
+
                 <View style={{justifyContent:'center', alignItems:'center'}}>
+
                     <Image
                     source={{ uri: 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/blog/play/dota_heroes.png' }}
-                    style={{ width: 500, height: 250}}
-                    />
+                    style={{ width: 500, height: 250}}/>
     
                     <View style={{width:70, marginRight:300, justifyContent:'center', alignItems:'center', flexDirection:'row'}}>
                         <Icon
@@ -144,7 +144,7 @@ export default class Home extends React.Component {
                         />
                     </View>
                     <Text style={{ lineHeight:20, textAlign:'auto', marginTop:5, marginRight:40}}>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
                 </View>
 
                 <View style={{justifyContent:'center', alignItems:'center', marginTop:15}}>
@@ -175,7 +175,7 @@ export default class Home extends React.Component {
                     </View>
 
                     <Text style={{ lineHeight:21, textAlign:'left', marginTop:5, marginRight:40
-                    }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
+                    }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
                 </View>
 
                 <View style={{justifyContent:'center', alignItems:'center', marginTop:15}}>
@@ -206,7 +206,38 @@ export default class Home extends React.Component {
                     </View>
 
                     <Text style={{ lineHeight:21, textAlign:'left', marginTop:5, marginRight:40
-                    }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
+                    }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
+                </View>
+
+                <View style={{justifyContent:'center', alignItems:'center', marginTop:15}}>
+                    <Image
+                    source={{ uri: 'https://wallpapercave.com/wp/wp3070126.jpg' }}
+                    style={{ width: 500, height: 250}}
+                    />
+
+                    <View style={{width:70, marginRight:300, justifyContent:'center', alignItems:'center', flexDirection:'row'}}>
+                        <Icon
+                        name='heart'
+                        type='evilicon'
+                        color='#517fa4'
+                        size={35}
+                        />
+                        <Icon
+                        name='comment'
+                        type='evilicon'
+                        color='#517fa4'
+                        size={35}
+                        />
+                        <Icon
+                        name='sc-telegram'
+                        type='evilicon'
+                        color='#517fa4'
+                        size={35}
+                        />
+                    </View>
+
+                    <Text style={{ lineHeight:21, textAlign:'left', marginTop:5, marginRight:40
+                    }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry</Text>
                 </View>
                 </Animated.ScrollView>
             </>
