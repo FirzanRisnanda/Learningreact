@@ -43,10 +43,10 @@ export default function App() {
     );
   }
     return (
-      <View>
+      <View style={{ backgroundColor: '#fff', justifyContent: 'center'}}>
         <Button title="Pilih Foto" onPress={openImagePickerAsync}/>
         <Button title="Bagikan Foto" onPress={openShareDialogAsync}/>
       </View>
     );
-  }
+}
 
