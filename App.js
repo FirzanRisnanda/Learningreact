@@ -68,13 +68,6 @@ function AddPostStack(){
               Upload Foto
             </Text>
           </View>
-          //headerRight: () => (
-            //<View>
-            //<Text style={{ fontWeight:'bold', marginRight:10, fontSize: 20, textAlign: 'left', color: '#517fa4'}}>
-              //Selanjutnya
-            //</Text>
-          //</View>
-          //),
         }}>
         </Stack.Screen>
     </Stack.Navigator>
