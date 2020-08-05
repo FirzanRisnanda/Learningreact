@@ -1,7 +1,8 @@
 import React from 'react';
-import { Image, Button, View } from 'react-native';
+import { Image,View, Text} from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Sharing from 'expo-sharing'; 
+import { NeuButton } from "neumorphism-ui";
 
 export default function App() {
   const [selectedImage, setSelectedImage] = React.useState(null);
@@ -9,7 +10,7 @@ export default function App() {
     let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
 
     if (permissionResult.granted === false) {
-      alert("Permission to access camera roll is required!");
+      alert("Diperlukan izin untuk mengakses kamera!");
       return;
     }
 
@@ -23,7 +24,7 @@ export default function App() {
 
   let openShareDialogAsync = async () => {
     if (!(await Sharing.isAvailableAsync())) {
-      alert(`Uh oh, sharing isn't available on your platform`);
+      alert(`Berbagi foto tidak tersedia`);
       return;
     }
 
@@ -37,16 +38,30 @@ export default function App() {
           source={{ uri: selectedImage.localUri }}
           style={{ backgroundColor: '#fff', marginBottom:5,paddingStart: 15, width: 500, height: 250}}
         />
-        <Button title="Pilih Foto" onPress={openImagePickerAsync}/>
-        <Button title="Bagikan Foto" onPress={openShareDialogAsync}/>
+
+        <NeuButton 
+          onPress={openImagePickerAsync} 
+          style={{borderRadius:50}} noPressedState={true}>
+          <Text style={{textAlign: 'center'}}>Pilih Foto</Text>
+        </NeuButton>
+        
+        <NeuButton onPress={openShareDialogAsync}style={{borderRadius:50}} noPressedState={true}>
+          <Text style={{textAlign: 'center'}}>Bagikan Foto</Text>
+        </NeuButton>
+
       </View>
+
     );
+  
   }
     return (
       <View style={{ backgroundColor: '#fff', justifyContent: 'center'}}>
-        <Button title="Pilih Foto" onPress={openImagePickerAsync}/>
-        <Button title="Bagikan Foto" onPress={openShareDialogAsync}/>
+        <NeuButton onPress={openImagePickerAsync} style={{borderRadius:75}} noPressedState={true}>
+          <Text style={{textAlign: 'center'}}>Pilih Foto</Text>
+        </NeuButton>
+        <NeuButton onPress={openShareDialogAsync}style={{borderRadius:75}} noPressedState={true}>
+          <Text style={{textAlign: 'center'}}>Bagikan Foto</Text>
+        </NeuButton>
       </View>
     );
 }
-
