@@ -22,7 +22,10 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "for"
+    },
+    "android": {
+      "package": "host.exp.learningreact"
     }
   }
 }
