@@ -175,11 +175,13 @@ function App() {
           options={{
             tabBarLabel:'',
             tabBarIcon: () => (
+              <View style={{justifyContent:'center', marginTop: 2}}>
                 <MaterialCommunityIcons  
                 name="account-circle-outline" 
                 color='#517fa4' 
                 size={35}
                 />
+              </View>
             ),
           }}/>  
       </Tab.Navigator> 
