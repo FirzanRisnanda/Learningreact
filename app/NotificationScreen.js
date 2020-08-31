@@ -3,7 +3,6 @@ import { View, Text, SafeAreaView, Animated, Image} from 'react-native';
 import { Icon } from 'react-native-elements';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-
 const NotificationScreen = () => {
   return (
             <Animated.ScrollView
