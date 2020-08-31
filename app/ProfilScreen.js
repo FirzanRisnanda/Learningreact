@@ -1,44 +1,53 @@
-import React, { Component } from "react";
-import { View, Text, Alert} from "react-native";
-import { NeuButton } from "neumorphism-ui";
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import React from 'react';
+import {
+  ScrollView,
+  RefreshControl,
+  StyleSheet,
+  Text,
+  SafeAreaView,
+} from 'react-native';
+import Constants from 'expo-constants';
 
-
-export default class App extends Component {
-  render() {
-    return (
-      <View style={{width:'100%',height:'100%',backgroundColor:'#e0e5ec',justifyContent:'center',alignItems:'center'}}>
-
-          {/* Circle NeuButton that stays pressed once clicked */}
-            <NeuButton style={{ height: 150, width: 150, borderRadius: 75 }}
-                onPress={() => {
-                  Alert.alert("I was pressed")
-                }}
-                onUnpress={() => {
-                  Alert.alert("I was unpressed")
-                }}
-              >
-                <Text style={{ opacity: 0.4, textAlign: 'center' }}>NeuButton with listeners</Text>
-            </NeuButton>
-            
-            {/* Rectangular NeuButton that doesn't stay pressed once clicked */}
-            <NeuButton style={{ height: 70, width: 120, borderRadius: 50 }} noPressedState={true}
-                onPress={() => {
-                  Alert.alert("I was pressed")
-                }}
-              >
-                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '60%' }}>
-                <MaterialCommunityIcons
-                    name='cards-heart'
-                    type='evilicon'
-                    color='#517fa4'
-                    size={25}
-                  />
-                  <Text style={{ fontWeight: 'bold', opacity: 0.4 }}>LIKE</Text>
-                </View>
-            </NeuButton>
-
-      </View>
-    );
-  }
+const wait = (timeout) => {
+  return new Promise(resolve => {
+    setTimeout(resolve, timeout);
+  });
 }
+
+const App = () => {
+  const [refreshing, setRefreshing] = React.useState(false);
+
+  const onRefresh = React.useCallback(() => {
+    setRefreshing(true);
+
+    wait(2000).then(() => setRefreshing(false));
+  }, []);
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView
+        contentContainerStyle={styles.scrollView}
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+        }
+      >
+        <Text>Pull down to see RefreshControl indicator</Text>
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: Constants.statusBarHeight,
+  },
+  scrollView: {
+    flex: 1,
+    backgroundColor: 'pink',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+export default App;

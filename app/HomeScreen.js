@@ -1,12 +1,13 @@
 import React from 'react'
 import {
     View, Text,
-    StyleSheet, Dimensions, Animated, Image, TouchableOpacity
+    StyleSheet, Dimensions, Animated, Image, TouchableOpacity, RefreshControl
 } from 'react-native'
 import { Icon } from 'react-native-elements'
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
+
 
 const ARR_STORY = [
     {
