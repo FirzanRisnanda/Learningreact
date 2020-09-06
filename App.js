@@ -7,10 +7,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Icon } from 'react-native-elements';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
 console.disableYellowBox = true;
 
-//import LoginScreen from './app/LoginScreen'
+import LoginScreen from './app/LoginScreen'
 import HomeScreen from './app/HomeScreen' 
 import SearchScreen from './app/SearchScreen'
 import AddPostScreen from './app/AddPostScreen'
@@ -20,14 +19,6 @@ import ProfilScreen from './app/ProfilScreen';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function LogoTitle() {
-  return (
-      <Image
-        source={{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTCtXE9_m-XXWJmgdFjowBMrV7wBJlkazWJORTyOUYp1t4sysJy&usqp=CAU'}}
-        style={{ width:115, height:32}}
-      />
-  );
-}
 
 function LoginStack(){
   return (
@@ -35,6 +26,16 @@ function LoginStack(){
       <Stack.Screen name="LoginScreen" component={LoginScreen}/>
     </Stack.Navigator>
   )
+}
+
+
+function LogoTitle() {
+  return (
+      <Image
+        source={{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTCtXE9_m-XXWJmgdFjowBMrV7wBJlkazWJORTyOUYp1t4sysJy&usqp=CAU'}}
+        style={{ width:115, height:32}}
+      />
+  );
 }
 
 function HomeStack(){
@@ -112,10 +113,10 @@ function App() {
   return (
 
     <NavigationContainer>
-    <Stack.Screen name="Login" component={LoginStack}/>
+    <Stack.Screen name="LoginScreen" component={LoginStack}/>
 
       <Tab.Navigator
-        initialRouteName="Home"
+        initialRouteName="Login"
         tabBarOptions={{
             activeTintColor: '#517fa4',
         }}>
