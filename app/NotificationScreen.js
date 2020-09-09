@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { View, Text, SafeAreaView, Animated, Image} from 'react-native';
-import { Icon } from 'react-native-elements';
+import { View, Text, Animated, Image} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const NotificationScreen = () => {
